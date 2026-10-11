@@ -1,0 +1,244 @@
+
+/* CareLoop Dashboard */
+
+.dashboard {
+  min-height: 100vh;
+  background: #f7f9fc;
+  color: #17253d;
+}
+
+/* Top navigation */
+
+.dashboard-nav {
+  min-height: 72px;
+  padding: 15px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #e1e7ef;
+}
+
+.dashboard-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #102b50;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.dashboard-logo span {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  background: #102b50;
+  color: #ffffff;
+}
+
+.logout-btn {
+  padding: 10px 17px;
+  border: 1px solid #d5deea;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #102b50;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Main content */
+
+.dashboard-content {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 55px 30px;
+}
+
+.dashboard-label {
+  margin: 0 0 12px;
+  color: #62758d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.welcome h1 {
+  margin: 0 0 12px;
+  color: #102b50;
+  font-size: 38px;
+  line-height: 1.2;
+}
+
+.welcome > p:last-child {
+  margin: 0;
+  color: #66758a;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.welcome strong {
+  color: #102b50;
+}
+
+/* Main navy health panel */
+
+.dashboard-summary {
+  margin-top: 35px;
+  padding: 30px;
+  border-radius: 15px;
+  background: #102b50;
+  color: #ffffff;
+}
+
+.summary-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #102b50;
+  font-size: 25px;
+}
+
+.dashboard-summary p {
+  margin: 24px 0 8px;
+  color: #c5d1df;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+.dashboard-summary h2 {
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.summary-note {
+  color: #c5d1df;
+  font-size: 14px;
+}
+
+/* Workspace heading */
+
+.section-title {
+  margin: 40px 0 20px;
+}
+
+.section-title h2 {
+  margin: 0 0 8px;
+  color: #102b50;
+  font-size: 24px;
+}
+
+.section-title p {
+  margin: 0;
+  color: #68778b;
+  font-size: 14px;
+}
+
+/* Dashboard cards */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.dashboard-card {
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  padding: 26px;
+  border: 1px solid #dfe6ef;
+  border-radius: 13px;
+  background: #ffffff;
+  color: #17253d;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(16, 43, 80, 0.08);
+}
+
+.dashboard-card.dark-card {
+  background: #102b50;
+  border-color: #102b50;
+  color: #ffffff;
+}
+
+.card-number {
+  color: #718198;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.dark-card .card-number {
+  color: #c5d1df;
+}
+
+.dashboard-card h3 {
+  margin: auto 0 10px;
+  color: #102b50;
+  font-size: 21px;
+}
+
+.dark-card h3 {
+  color: #ffffff;
+}
+
+.dashboard-card p {
+  margin: 0;
+  color: #68778b;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.dark-card p {
+  color: #c5d1df;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #102b50;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.dark-card .card-link {
+  color: #ffffff;
+}
+
+/* Medical disclaimer */
+
+.dashboard-note {
+  margin-top: 28px;
+  color: #778396;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* Responsive layout */
+
+@media (max-width: 800px) {
+  .dashboard-content {
+    padding: 35px 20px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome h1 {
+    font-size: 31px;
+  }
+}

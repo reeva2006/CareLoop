@@ -1,0 +1,271 @@
+
+/* CareLoop Health Assessment */
+
+.assessment-page {
+  min-height: 100vh;
+  background: #f7f9fc;
+  color: #17253d;
+}
+
+/* Top navigation */
+
+.assessment-nav {
+  min-height: 72px;
+  padding: 15px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #e1e7ef;
+}
+
+.assessment-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #102b50;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.assessment-logo span {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  background: #102b50;
+  color: #ffffff;
+}
+
+.back-dashboard {
+  color: #102b50;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.back-dashboard:hover {
+  text-decoration: underline;
+}
+
+/* Main content */
+
+.assessment-content {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 55px 25px 75px;
+}
+
+.assessment-label {
+  margin: 0 0 12px;
+  color: #526b89;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.assessment-content > h1 {
+  margin: 0 0 14px;
+  color: #102b50;
+  font-size: 38px;
+  line-height: 1.25;
+}
+
+.assessment-intro {
+  margin: 0 0 30px;
+  color: #68778b;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Form container */
+
+.assessment-form {
+  width: 100%;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #e1e7ef;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(16, 43, 80, 0.04);
+}
+
+.assessment-form h2 {
+  margin: 0 0 28px;
+  color: #102b50;
+  font-size: 22px;
+}
+
+/* Form labels */
+
+.assessment-form label {
+  display: block;
+  margin-bottom: 24px;
+  color: #102b50;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* Input fields */
+
+.assessment-form input,
+.assessment-form textarea,
+.assessment-form select {
+  display: block;
+  width: 100%;
+  min-height: 46px;
+  margin-top: 9px;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #17253d;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.assessment-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.assessment-form input::placeholder,
+.assessment-form textarea::placeholder {
+  color: #8a94a3;
+  opacity: 1;
+}
+
+.assessment-form select {
+  cursor: pointer;
+}
+
+/* Focus effect */
+
+.assessment-form input:focus,
+.assessment-form textarea:focus,
+.assessment-form select:focus {
+  outline: 2px solid #dce7f5;
+  border-color: #102b50;
+}
+
+/* Submit button */
+
+.assessment-submit {
+  display: block;
+  width: 100%;
+  min-height: 49px;
+  margin-top: 8px;
+  padding: 14px 20px;
+  border: 1px solid #102b50;
+  border-radius: 8px;
+  background: #102b50;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.assessment-submit:hover {
+  background: #1b416c;
+}
+
+/* Privacy note */
+
+.privacy-note {
+  margin: 18px 0 0;
+  color: #718092;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* Assessment summary */
+
+.assessment-result {
+  margin-top: 28px;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #dfe6ef;
+  border-radius: 14px;
+}
+
+.assessment-result h2 {
+  margin: 12px 0 25px;
+  color: #102b50;
+  font-size: 23px;
+}
+
+.summary-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid #e8edf3;
+}
+
+.summary-row span {
+  flex: 1;
+  color: #68778b;
+  font-size: 14px;
+}
+
+.summary-row strong {
+  flex: 1;
+  color: #102b50;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: right;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.summary-disclaimer {
+  margin: 22px 0 0;
+  color: #68778b;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* Mobile screen */
+
+@media (max-width: 600px) {
+  .assessment-nav {
+    padding: 14px 20px;
+  }
+
+  .assessment-logo {
+    font-size: 19px;
+  }
+
+  .assessment-content {
+    padding: 38px 16px 50px;
+  }
+
+  .assessment-content > h1 {
+    font-size: 31px;
+  }
+
+  .assessment-form {
+    padding: 24px 19px;
+  }
+
+  .assessment-result {
+    padding: 23px 18px;
+  }
+
+  .summary-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .summary-row strong {
+    text-align: left;
+  }
+}
