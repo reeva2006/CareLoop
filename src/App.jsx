@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
+import { CarePandaWidget } from "./CareLoopExtras";
 import { ConsultTab, flushConsultQueue } from "./Consult.jsx";
 
 /* =========================================================
@@ -95,7 +96,7 @@ const LogoMark = () => (
 /* =========================================================
    Root
    ========================================================= */
-export default function App() {
+function App() {
   const [user, setUser] = useState(() => {
     try {
       const u = JSON.parse(localStorage.getItem(K.user) || "null");
@@ -425,6 +426,8 @@ function Dashboard({ user, onLogout }) {
         {tab === "consult" && <ConsultTab data={data} user={user} online={online} />}
         {tab === "ask" && <AssistantTab data={data} />}
       </main>
+
+      <CarePandaWidget user={user} />
     </div>
   );
 }
@@ -880,6 +883,7 @@ function AssistantTab({ data }) {
   const [locationInfo, setLocationInfo] = useState(null);
   const [locationError, setLocationError] = useState("");
   const endRef = useRef(null);
+
   // Keep the effect synchronous; React effects must not return a Promise or a DOM method result.
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -1047,3 +1051,5 @@ function AssistantTab({ data }) {
     </section>
   );
 }
+
+export default App;
